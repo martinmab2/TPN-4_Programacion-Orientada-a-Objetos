@@ -13,6 +13,7 @@ public class Reserva {
 	private Pasajero pasajero;
 	private boolean tieneAcompañante;
 	private Estado estado;
+	
 	public String getOrigen() {
 		return origen;
 	}

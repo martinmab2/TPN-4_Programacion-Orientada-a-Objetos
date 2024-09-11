@@ -14,6 +14,12 @@ public class Manager {
 	private List<Reserva> reservas;
 	private List<String> origenes;
 	private List<String> destinos;
+	
+	public Manager(){
+		precargarPasajeros();
+		precargarOrigenesYDestinos();
+        precargarReservas();
+	}
  	
 	public void precargarPasajeros() {
 		pasajeros = new ArrayList<>();
@@ -89,6 +95,23 @@ public class Manager {
 		reservas.add(new Reserva(origenes.get(3), destinos.get(6), LocalDate.of(2024, 10, 1), LocalDate.of(2024, 10, 15), Clase.Economy, pasajeros.get(0), true, Estado.CANCELADA));
 		reservas.add(new Reserva(origenes.get(7), destinos.get(3), LocalDate.of(2024, 10, 1), LocalDate.of(2024, 10, 15), Clase.Economy, pasajeros.get(0), true, Estado.CANCELADA));
 		reservas.add(new Reserva(origenes.get(9), destinos.get(5), LocalDate.of(2024, 10, 1), LocalDate.of(2024, 10, 15), Clase.Economy, pasajeros.get(0), false, Estado.CANCELADA));
-		reservas.add(new Reserva(origenes.get(5), destinos.get(1), LocalDate.of(2024, 10, 1), LocalDate.of(2024, 10, 15), Clase.Economy, pasajeros.get(0), false, Estado.CANCELADA));
+		reservas.add(new Reserva(origenes.get(5), destinos.get(14), LocalDate.of(2024, 10, 1), LocalDate.of(2024, 10, 15), Clase.Economy, pasajeros.get(0), false, Estado.CANCELADA));
 	}
+	
+	public List<Pasajero> getPasajeros() {
+        return pasajeros;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public List<String> getOrigenes() {
+        return origenes;
+    }
+
+    public List<String> getDestinos() {
+        return destinos;
+    }
+
 }
